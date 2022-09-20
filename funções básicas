@@ -1,0 +1,345 @@
+ # aula 9. atribuindo variáveis com sinal de "=" 
+y = 8  # shift+enter atribui o valor a y
+
+ print (y) #ctrl +enter 
+ 8
+
+ #se digitar Y ao invés de Y irá aparecer a seguinte mensagem: 
+ print (Y)
+
+ ---------------------------------------------------------------------------
+ NameError                                 Traceback (most recent call last)
+ Input In [48], in <cell line: 1>()
+ ----> 1 print (Y)
+
+ NameError: name 'Y' is not defined
+ # esse erro aparece por conta do case sensitive do python
+ 
+ # atribuindo mais de um valor em duas ou mais variáveis na mesma linha
+ x,y = (1,2)
+ 
+ # caso tenha mais variáveis q valores ou vice versa:
+ x,y = (1,2,3)
+ x,y = (1,2,3)
+ ---------------------------------------------------------------------------
+ ValueError                                Traceback (most recent call last)
+ Input In [51], in <cell line: 1>()
+ ----> 1 x,y = (1,2,3)
+ 
+ ValueError: too many values to unpack (expected 2)
+ 
+ # EXERCÍCIOS DA AULA 9 
+ Variables
+ Create a variable with name "x" and a value of 10. Execute.
+ x = 10
+ 
+ Tell the computer to show you the value of that variable.
+ print (x)
+ Can you think of a second way to obtain the same result?
+ x = 5+5
+ print (x)
+ 
+ On the same line, create four new variables: a,b,c, and d, that are equal to 10, 20, 30, and 40, respectively.
+ a,b,c,d = (10,20,30,40)
+ Tell the computer to show you the value corresponding to the variable "b".
+ 
+ Do the same for "d".
+ print (d)
+    
+ #aula 10 - números e valores booleanos
+inteiros : positivos ou negativos
+ floats : números decimais
+ x1=5
+ type (x1) #função type verifica os valores ao invés das variáveis
+ int  # significa que x1 é um numero inteiro ou interable em inglês 
+ x2=5.4
+ type (x2)
+ float # significa que x1 é um numero decimal ou float em inglês 
+ 
+ int (x2) #transforma valor decimal em inteiro
+ 5
+ float(x2)# transforma valor inteiro em decimal
+ 5.4
+ # valores booleanos: verificar se algo é verdadeiro ou falso em logica de computação, atribuindo o valor verdadeiro a x3
+ x3 = true
+ ---------------------------------------------------------------------------
+ NameError                                 Traceback (most recent call last)
+ Input In [59], in <cell line: 1>()
+ ----> 1 x3 = true
+
+ NameError: name 'true' is not defined
+ # o erro aconteceu porque deve-se digitar True ou False com pri.maiuscula
+ 
+ x3 = True
+ x3
+ type (x3)
+ bool = quer dizer que é uma variável booleana
+ x4 = False
+ type (x4)
+ bool
+ x4
+ print (x4)
+ False # a função print novamente demonstra que o valor atribuido é falso.
+ 
+ 
+ #aula 11- strings (combinações entre textos e números
+ 
+George #digitando somente o texto para provocar o erro abaixo, significa que deve-se usar ' ou " para definir um texto
+
+ ---------------------------------------------------------------------------
+ NameError                                 Traceback (most recent call last)
+ Input In [65], in <cell line: 1>()
+ ----> 1 George
+
+ NameError: name 'George' is not defined
+
+ 'George' #' trará o resultado abaixo 
+ 'George'
+ "George" # " trará o resultado abaixo 
+ 'George'
+
+ print ('George')
+ George # trará o resultado abaixo (sem aspas)
+ George
+ 
+ x4 = "George" # combinando as variáveis entre strings
+ y=10
+ print (str(y)+ " Dollars") # combinando uma variável numérica com um texto
+ 10 Dollars
+ 
+ "I'm Fine" # como digitar textos que incluem aspas 
+ "I'm Fine"
+ 
+ 'Red' 'Car' # dois textos ou mais juntos
+ 'RedCar'
+ Car
+ 'Red ' 'Car' # dois textos ou mais separados por um espaço
+ 'Red Car'
+ 'Red ' + 'Car' # dois textos ou mais separados por um espaço
+ 'Red Car'
+ )
+ print ('Red ' + 'Car') # dois textos ou mais separados por um espaço com print
+ Red Car
+ print ('Red', 'Car') # dois textos ou mais separados por um espaço
+ Red Car
+ )
+ print (3,5)
+ 3 5
+ 
+ 3,5,6.9,7.0, 'car' # combinando numeros com textos utilizando o conhecimento do python em reconhecer variáveis automaticamente
+ (3, 5, 6.9, 7.0, 'car') # resultado
+ 
+  #aula 12, 13 e 14  - Operadores aritméticos, duplo sinal de igualdade e ordem de comandos
+operações matemáticas simples
+ 1+2 # - e + são chamados de operandos
+ 1+2
+ 3
+ 
+ 3-5
+ -2
+ 3
+ 
+ 15/3 # em divisão usa-se /
+ 5.0
+ 3
+ 
+ 16/3 # no python 3 divisões em que aparecem decimais são demonstradas como decimais ao invés do python 2
+ 5.333333333333333
+ 
+ 16 % 3 # O % representa o resto de uma divisão que pode ser obtido matematicamente
+ 
+ x= 5*3 # em multiplicação utiliza-se o * ( aqui atribui a uma variável para demonstrar que pode ser atribuido também 
+ x
+ 15 # retorna o valor da variável x 
+
+ x= 5**3  # em elevação se utiliza ** ao invés de ^.
+ x
+ x
+ 125 # retorna o valor de 5 elevado a 3. 
+
+ DUPLO SINAL DE IGUALDADE 
+  y= 5**3  
+  y
+  y
+  125
+  y==125 # O duplo sinal de igualdade seria como uma pergunta via IF sobre se o valor é booleano (falso ou verdadeiro)
+  True
+  6
+  y == 126 #novamente um teste provocando dizer q é falso
+  False
+  
+  
+  ORDEM DE COMANDOS  # apenas demonstrando que comandos antigos são sobrepostos em frente aos novos conforme vemos a seguir
+   z=1
+   z 
+   1
+   z=3
+   z=3
+   z  
+   3 # z agora é igual a trez
+   5
+   z+5
+   8 # z agora é 3 +5 que é igual a 8
+   =7
+   z=7 
+   z
+   z
+   7 # z agora é igual a 7
+   
+   EXERCÍCIOS AULAS 12, 13 E 14
+    Arithmetic operators
+    Combine 15 and 23.
+
+    3
+    15+23
+    38
+    Subtract 50 from 26.
+
+    6
+    50-26
+    24
+    Divide 20 by 4.
+
+    4
+    20/4
+    5.0
+    Divide 22 by 4.
+    
+    /4
+    22/4
+    5.5
+    Obtain the remainder of the division of 22 by 4.
+
+    %4
+    22%4
+    2
+    Divide the float 22 by 4.
+
+    22.0
+    float(22)/4
+    5.5
+    Multiply 6 by 8.
+
+    6*8
+    6*8
+    48
+    Raise 15 to the power of 2.
+
+    15**2
+    15**2
+    225
+    
+    
+    The double-equality sign
+    Demonstrate that 100 is not equal to 98.
+
+    8
+    100==98
+    False
+    98
+    x=98
+    ==100
+    x==100
+    False
+    
+    Reassign Values
+    Assign the value of 14 to a variable p.
+
+    p=14
+    Calculate p + 10.
+
+    0
+    p+10
+    24
+    Now, assign 30 to the variable p.
+
+    30
+    p=30
+    Calculate p + 10.
+    p+10
+    p+10
+    40
+    Observe how the value of p is always the last one you have assigned.
+    
+    #aulas 15 - 18 comentários, continuações de linhas, indexação de Elementos e Estruturação de Códigos
+o python usa # como comentários
+ #teste
+ print (7,2)
+ 7 2
+ #print
+ #print
+ 300
+ #comentario
+ #comentario
+ print (300)    
+ 
+ #CONTINUAÇÃO DE LINHAS - USE A \
+ 3+2+4 \
+ +4
+ 
+ #indexação (obs python conta a partir de 0 e não do 1) utiliza-se o colchetes
+ #"nome da variável ["indice_do_elemento]
+ "Friday" [5]
+ 'y'
+ 
+ #recuo ou identação (estruturação por blocos de códigos)
+ #def five (x) # bloco 1
+ #  x=5       # bloco 2
+ #  return x # bloco 2
+ # print (five (3)) # bloco 1
+ 
+ 
+ # aula 19-  operadores de comparação 
+ #verifica se não é verdade
+ 10 != 10
+ False
+ #verifica se não é verdade
+ 10 != 15
+ True
+ #é maior ou menor?
+ 100>50
+ True
+ #é maior ou menor?
+ 100<50
+ False
+ #é menor ou igual, maior ou igual?
+ 15>=10+10
+ False
+ #é menor ou igual, maior ou igual?
+ 15<=10+10
+ True
+ 
+ #operadores lógicos booleanos not, and e or - comparam valores para determinar se é falso ou verdadeiro
+ True and True
+ True
+ True and False
+ False
+ False and False
+ False
+ #or verifica se uma delas é verdadeira "true"
+ True or True
+ True
+ # a ordem não importa para o or 
+ True or False
+ True
+ #not é o oposto de uma afirmação dada
+ not True
+ False
+ #teste com uma operação false e outra true para determinar se é verdadeiro
+ 3>5 and 10<=20
+ False
+ #ordem correta not-and-or
+ True and not True
+ False
+ True and not True or True
+ True
+ #operadores de identidade is, is not
+ 5 is 6
+ False
+ 5==6 # mesma coisa que usar == duas vezes
+ False
+ 5 is not 6
+ True
+ 5 != 6 # mesma coisa que usar !=
+ True
+ 

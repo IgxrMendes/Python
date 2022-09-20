@@ -1,0 +1,14 @@
+# enter = entrar na edição de uma célula
+# esc = sair do modo edição
+# CTRL +ENTER = Executar uma célula
+# shift + enter = criar uma nova célula 
+# x = cortar célula
+# c = copiar
+# v = colar
+# seta para cima e para baixo = andar pelo editor de células
+# a = criar célula a cima
+# b = criar célula abaixo 
+# m = transformar célula em markdown (marcação)
+# y = transformar célula em code (código)
+# z = restaurar células apagadas
+# \ = continuação de linha 

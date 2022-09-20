@@ -1,0 +1,262 @@
+#trabalhando com as funções do python 
+# para criar uma função utiliza-se def (uma palavra reservada)
+#a cor se altera para verde indicando que é uma palavra reservada
+# def nomefunção(parâmetros):
+def simple ():
+    print ("My first Function")
+
+    #para rodar a função precisa chama-la
+simple ()
+
+My first Function
+
+def plus_ten(a): #nomeie as funções com nomes intuitivos 
+#retorna um valor de um calculo a ser realizado   
+    return  a + 10 # f(x) x + 10 =  y 
+
+ plus_ten(2) #alterando o valor de a
+
+ 12
+ plus_ten(5) #alterando o valor de a
+ 15
+ #outra maneira de organizar
+def plus_ten(a):
+    result = a + 10
+
+ plus_ten(2)
+ #repare que ao executar esse código nada acontece, pois, é necessário retornar a variavel
+ def plus_ten(a):
+ result = a + 10
+ return result
+ 
+ plus_ten(2)
+ 12
+ 
+
+ #outra maneira de organizar com print
+def plus_ten(a):
+    result = a + 10
+
+ plus_ten(2)
+ #repare que ao executar esse código nada acontece, pois, é necessário retornar a variavel
+ def plus_ten(a):
+ print ("outcome: ")
+ result = a + 10
+ return result
+ 
+ plus_ten(2)
+ outcome:
+ 12
+ 
+ 
+ # duas funções sendo combinadas
+# função dentro de outra função 
+
+def wage (h): #salario por hora
+    return h * 25
+def bonus (h): #bonus por hora trabalhada 
+    return wage (h) + 50
+wage(8), bonus (8)
+(200, 250)
+
+
+# combinando condicionais com funções
+# se jhonny poupar 100 dolares ao até o fim da semana, ganhara + 10 dolares
+
+#criando uma função de adicionar os 10 dolares tendo m como dinheiro economizado
+
+def add_10 (m):
+    #se m >= 100 adicione 10 ao valor ou m < 100 "poupe mais!"
+    if m >= 100:
+        m= m + 10
+        return m #retorne o valor com o novo m com os 10 dolares 
+    else:
+        return "Save more!"
+        
+        
+ #chamando com o valor maior que 100
+ add_10(100)
+ 110
+ 
+ #chamando com um valor menor para provocar o erro
+ add_10(50)
+ 'Save more!'
+ 
+ #trabalhando com mais de um parâmetro em uma função utilizando a vírgula.
+# definindo uma função com 3 parâmetros
+def subtract_bc (a,b,c):
+    result = a - b*c
+    print ("Parameter a equals", a)
+    print ("Parameter b equals", b)
+    print ("Parameter c equals", c)
+    return result
+    
+    subtract_bc (10,3,2) #setando valores para cada parametro f(x) = 10-(3*2)
+    Parameter a equals 10
+ Parameter b equals 3
+ Parameter c equals 2
+ 4
+
+
+#funções nativas do python 
+type (10) #retorna valores se são inteiros ou decimais (floats)
+5.0
+int (5.5) #retorna o valor inteiro 
+5
+float (3) # retorna o valor decimal
+3.0
+str(500) #retorna o valor de uma determinada string
+'500'
+max (10,30,50) #retorna o valor maximo de uma sequência
+50
+min (10, 20, 30) #inverso do max
+10
+z = -20
+abs (z) #traz o valor absoluto de uma série 
+20
+list_1 = [1,2,3,4]
+sum(list_1) #soma uma determinada série
+10
+round(3.555,2) #arredondamento de valores
+3.56
+2**10
+1024
+pow(2,10) #elevação (potencia, valor) por ex: 2^10
+1024
+len('Mathematics') # quantos caracteres 'lenght'
+11
+
+
+
+
+#EXERCICIOS DE FIXAÇÃO 
+Define a function that returns a value equal to its argument multiplied by 2.
+def vezes_2 (b):
+    return b*2
+
+def div_2 (b):
+    return b / 2
+
+
+div_2(10), vezes_2 (10)
+(5.0, 20)
+
+Define a function that states the value of the argument accompanied by the phrase
+"Raised to the power of 2:" and returns a value equal to its argument raised to the power of 2. 
+This time, use a new variable, called "result", in the body of the Function. Call the function with some 
+argument to verify it works properly.
+
+Hint: Your knowledge about stating multiple elements on a line can be of great help in solving this exercise!
+
+#o enunciado pede que imprima a frase e eleve o argumento a potencia 2 
+#usar result e testar a função
+
+def elevado2 (b):
+    result = pow(2,b)
+    print ("Raised to the power of 2: ")
+    return b
+    
+    elevado2(10)
+    
+Raised to the power of 2: 
+10
+
+## Using a Function in Another Function
+Define a function that adds 5 to the parameter. Then, define another function that will multiply the newly obtained number by 3.
+Verify your code was correct by calling the second function with an argument of 5. 
+Was your output equal to 30?
+
+#defina uma função que adicione 5 ao parametro
+def add5 (b5):
+    return b5 + 5
+#defina uma outra função que multiplique o resultado obtido por 3 
+def multiply3 (b5):
+    return add5 (b5) * 3
+    
+#atribuia 5 a segunda função e veja se obtem o resultado 30
+multiply3 (5)
+30 
+
+## Combining Conditional Statements and Functions
+
+Define a function, called **compare_the_two()**, with two arguments. 
+If the first one is greater than the second one, let it print "Greater".
+If the second one is greater, it should print "Less". Let it print "Equal" if the t
+two values are the same number.
+#defina a função com dois argumentos 
+def compare_the_two(a,b):
+# se o primeiro for maior que o segundo imprimir a frase "greater"
+    if a > b:
+        print ("greater")
+# se for menor  "less"
+    if a < b:
+        print ("Less")
+        # se for maior  "equal"
+    if a == b:     
+        print ("equal")
+        
+        #a>b
+compare_the_two(10,5)
+greater
+
+#a<b
+compare_the_two(3,5)
+less
+
+#a=b
+compare_the_two(5,5)
+equal 
+
+Obtain the maximum number among the values 25, 65, 890, and 15.
+max(25,65,890, 15)
+890
+
+Obtain the minimum number among the values 25, 65, 890, and 15.
+min(25,65,890, 15)
+15
+
+Find the absolute value of -100
+abs(-100)
+100
+
+Round the value of 55.5. Did you obtain 56.0?
+round (55.5)
+56
+
+Round 35.56789 to the third digit.
+round (35.56789, 3)
+5.568
+
+Find the sum of all elements in the provided list, called "Numbers".
+Numbers = [1, 5, 64, 24.5]
+sum(Numbers)
+94.5
+
+Use a built-in function to raise 10 to the power of 3.
+pow (3, 10)
+59049
+
+How many characters are there in the word "Elephant"?
+len("Elephant")
+8
+
+Create a function, called "distance_from_zero", that returns the absolute value of a provided single argument and prints a statement "Not Possible" if the argument provided is not a number.
+Call the funtion with the values of -10 and "cat" to verify it works correctly.
+
+
+#crie uma função que retorna o valor absoluto de um argumento unico 
+def distance_from_zero (a):
+    if type (a) == int or type(a) == float: #se for inteiro ou decimal 
+        return abs (a) #retornar o valor absoluto
+    else  #qualquer valor que não seja numérico
+        print ("not possible")
+        
+    #testando com cat
+distance_from_zero ("cat")
+not possible
+
+#testando com -10
+distance_from_zero (-10)
+
+10
+

@@ -1,0 +1,332 @@
+#listas no python 
+# uma lista é uma sequencia de dados, podem ser numeros ou textos
+#
+
+# como indexar um valor da lista, não use () ou chave
+print (participants [1])
+
+#indexando o valor 1 (segundo elemento, python se inicia com 0)
+
+#chegando ao ultimo elemento de uma lista
+participants [-1]
+
+#chegando ao penultimo elemento de uma lista
+participants [-2]
+
+#substituindo ou deletando um elemento de uma lista
+participants [3] = "Maria"
+participants
+
+#removendo um elemento da lista
+del participants [2]
+participants
+
+participants[3]
+#não existem mais elementos na 3a posição
+
+#adicionando algo a lista com append 
+#append visa adicionar algo via métodos originais do python que já estão prontos
+#objeto.metodo () para usar nesse raciocício
+participants.append("Dwayne")
+participants
+
+
+#mesmo resultado pode ser obtido com extend
+#append visa adicionar algo via métodos originais do python que já estão prontos
+#objeto.metodo ([]) para usar nesse raciocício pois estamos extendendo a lista
+participants.extend(["George", "Catherine"])
+participants
+
+
+#combinando elementos com strings
+print ('The First Participant is ' + participants[0] + '.')
+
+len ('Dolphin')
+
+len (participants) # a função len mosta a quantidade de caracteres quando trabalhado com lista
+
+# para se criar uma lista, usamos colchetes
+
+participants = ["John", "Leila", "Gregory", "Cate"]
+participants
+
+# fatiamento de listas
+participants
+
+# para fazer o fatiamento "slicing" de uma lista usando participants como ex
+# devemos abrir os colchetes extraindo os objetos desejados
+participants[1:3] #obtem os usuarios 1 e 3 e não 1 até o 3
+
+#obtendo somente os dois primeiros
+participants[:2]
+
+#obtendo os dois ultimos
+participants[4:]
+
+participants[-2:]
+
+#descobrindo o índice (posição ou index) de algum participante de uma lista com index
+participants.index("Maria")
+
+#criando listas de listas
+newcommers = ["Joshua", "Brittany"]
+newcommers
+
+#anexando uma lista na outra anexe como se estivesse fazendo uma lista normal
+biggerlist= [participants, newcommers]
+biggerlist
+
+#ordenando por ordem alfabética (FUNCIONA PARA NÚMEROS)
+participants.sort()
+participants
+
+#ordenando por ordem reversa com propriedade reverse (FUNCIONA PARA NÚMEROS)
+participants.sort(reverse=True)
+participants
+
+####tuplas
+#tuplas são dados imutáveis (que não podem ser alterados)
+#para trabalhar com uma tupla, usamos parenteses
+x = (40,41,42)
+x
+
+# tupla é uma sequencia padrão do python e ele também entende sem usar os parenteses
+y = 50, 51, 52
+y
+
+a,b,c = 1,4,6
+c
+
+#usando tuplas nas listas
+list [x,y]
+
+#tuplas são diferentes de listas em alguns detalhes, podem ser uteis com diferentes valores
+(age, tempo) = "30,17".split(',') # o método split irá atribuir duas variáveis
+print (age)
+print (tempo)
+
+#tuplas podem ser o retorno de uma tupla de multiplos valores
+def perimetro(x):
+    A = x ** 2
+    P = 4 * x
+    print ("Area and Perimeter:")
+    return A,P
+perimetro(5)
+
+#dicionários 
+# é uma outra maneira de armazenar dados, cada valor sendo associado a uma chave
+dict = {'k1': "cat", 'k2': "dog", 'k3': "mouse", 'k4': "fish"}
+dict
+
+dict ['k1']
+
+dict ['k3']
+
+# adicionando ao dicionário como se fosse uma lista
+# isso quer dizer que dicionarios e listas podem trabalhar em conjunto
+dict ['k5'] = 'parrot'
+dict
+
+# modificando o valor de um determinado dicionario
+dict ['k3'] = 'squirrel'
+dict
+
+##isso quer dizer que dicionarios e listas podem trabalhar em conjunto
+
+dep_workers = {'dep_1':'peter', 'dep_2': ['Jennifer', 'Michael', 'Tommy']}
+# usando uma lista combinando com um dicionário
+dep_workers ['dep_2'] #imprimindo a lista em questão
+
+#uma outra maneira mais organizada de montar uma lista é usar as chaves vazias
+# declaramos uma variável com chaves vazias para determinar que é um dicionário
+# seguimos por uma estrutura variavel['nome 1'] = ['nome 2'] que podem  ser f(x)
+# textos, calculos etc... 
+
+time = {}
+time ['atacante: '] = 'caze'
+time ['defensor: '] = 'igor gomes'
+time ['meio campo: '] = 'cristiano ronaldo'
+
+print (time)
+
+#obtendo um valor correspondente de um dicionário
+# usando metodo get
+# deve se usar a variável da mesma forma que está no dicionário em questão 
+# caso de errado retornara none (valor padrão para objetos não existentes)
+
+print (time.get ('atacante: '))
+
+
+
+
+####EXERCICIOS
+
+## Lists
+
+Create a list, called "Numbers". Let it contain the numbers 10, 25, 40, and 50.
+
+Numbers = [10,25,40,50]
+
+Print the second element from the list.
+
+print(Numbers[1])
+
+Print the 0th element.
+
+print (Numbers[0])
+
+Print the third-to-last element using a minus sign in the brackets.
+
+print (Numbers[-3])
+
+Substitute the number 10 with the number 15.
+
+Numbers [0] = 15
+Numbers
+
+Delete the number 25 from the Numbers list.
+
+del Numbers [1]
+Numbers
+
+
+## List Slicing
+
+Numbers = [15, 40, 50, 100, 115, 140]
+
+Using list slicing, obtain the numbers 100 and 115.
+
+Numbers[3:5]
+
+Using slicing, extract the first four elements from the list.
+
+Numbers[:2]
+
+Using slicing, extract all the elements from the list from the 3rd position onwards.
+
+Numbers[-3:]
+
+Using slicing, extract the last 4 elements from the list.
+
+Numbers[-4:]
+
+Which is the position of the value 115?
+
+Numbers.index(115)
+
+Create a list, called "Two_Numbers". Let its elements be the values 1 and 2. Then, create a new one, named "All_Numbers", that will containt both the "Numbers" and the "Two_Numbers" lists. 
+
+Two_Numbers = 1,2
+All_Numbers = [Two_Numbers, Numbers]
+print (All_Numbers)
+
+Sort all the numbers in the "Numbers" list from the largest to the smallest.
+
+Numbers.sort()
+Numbers
+
+## Help Yourself with Methods
+
+Append the number 100 to the Numbers list. 
+
+Numbers = [15, 40, 50]
+
+Numbers.append(100)
+Numbers
+
+With the help of the "extend method", add the numbers 115 an 140 to the list. 
+
+Numbers.extend([115, 140])
+Numbers
+
+Print a statement, saying "The fourth element of the Numbers list is:" and then designate the value of the fourth element. Use a trailing comma.
+
+print ("The fourth element of the Numbers list is: " + str(Numbers[4]))
+
+How many elements are there in the Numbers list?
+
+len(Numbers)
+
+
+## Tuples
+
+Create a tuple, called "Cars", with elements "BMW", "Dodge", and "Ford". 
+
+Cars = ("BMW", "Dodge", "Ford")
+
+Access the second element of this tuple.
+
+Cars [1]
+
+Call a method that would allow you to extract the provided name and age separately. Then print the "name" and "age" values to see if you worked correctly.
+
+name, age = 'Peter,24'.split(',')
+name, age
+
+Create a function that takes as arguments the two values of a rectangle and then returns the Area and the Perimeter of the rectangle.
+Call the function with arguments 2 and 10 to verify it worked correctly.
+
+def exercicio (x):
+    A = x**2 #area do quadrado
+    P = 4 * x #perimetro
+    print ("Area: " + str(A) + " Perimeter: " + str(P))
+    return A,P
+
+exercicio (2)
+
+exercicio (10)
+
+
+## Dictionaries
+
+*Suggested Answers follow (usually there are multiple ways to solve a problem in Python).*
+
+This is the menu of a close-by restaurant:
+
+Menu = {'meal_1':'Spaghetti', 'meal_2':'Fries', 'meal_3':'Hamburger', 'meal_4':'Lasagna'}
+
+What is the second meal in the list?
+
+print(Menu.get('meal_2'))
+
+Add a new meal - "Soup".
+
+Menu = {'meal_1':'Spaghetti', 'meal_2':'Fries', 'meal_3':'Hamburger', 'meal_4':'Lasagna', 'meal_5': 'Soup'}
+print(Menu.get('meal_5'))
+
+
+Replace the Hamburger with a Cheeseburger.
+
+Menu = {'meal_1':'Spaghetti', 'meal_2':'Fries', 'meal_3':'Cheeseburger', 'meal_4':'Lasagna', 'meal_5': 'Soup'}
+print(Menu.get('meal_3'))
+
+
+Attach the Desserts list in the form of a sixth meal.
+
+Dessert = ['Pancakes', 'Ice-cream', 'Tiramisu']
+
+Menu = {'meal_1':'Spaghetti', 'meal_2':'Fries', 'meal_3':'Cheeseburger', 
+        'meal_4':'Lasagna', 'meal_5': 'Soup', 'meal_6':[Dessert]}
+print((Menu))
+
+Create a new dictionary that contains the first five meals as keys and assign the following five values as prices (in dollars):
+10, 5, 8, 12, 5. 
+Start by *Price_list = {}*.
+
+
+Price_list = {}
+Price_list [Menu['meal_1']] = 10
+Price_list [Menu['meal_2']] = 5
+Price_list [Menu['meal_3']] = 8
+Price_list [Menu['meal_4']] = 12
+Price_list [Menu['meal_5']] = 5
+
+print (Price_list)
+
+
+
+Use the *.get()* method to check the price of the Spaghetti.
+
+Price_list.get('Spaghetti')
+
+
